@@ -50,7 +50,7 @@ Julia and Trixi.jl for yourself using these notebooks.
 
 **Note:** The tutorial is intended for researchers who are already
 familiar with at least one other high-level language scientific programming
-language such as Python, C/C++, or Fortran.
+language such as Python, C, C++, or Fortran.
 
 
 ## Getting started
@@ -133,7 +133,7 @@ To make the notebook fully reproducible, we have used Julia's package manager
 to pin all packages to a fixed release. This ensures that you always have a
 Julia environment in which all examples in this notebook work. Later you can
 always install the latest versions of Trixi.jl and its dependencies by following
-the instructions in the Trixi
+the instructions in the Trixi.jl
 [documentation](https://trixi-framework.github.io/Trixi.jl/stable/).
 
 If you have not done it yet, clone the repository where this notebook is stored:
@@ -146,9 +146,9 @@ cd tutorial-2023-kassel
 julia --project=. -e 'using Pkg; Pkg.instantiate()'
 ```
 This will download and build all required packages, including the ODE package
-[OrdinaryDiffEq](https://github.com/SciML/OrdinaryDiffEq.jl), the visualization
-package [Plots](https://github.com/JuliaPlots/Plots.jl), and of course
-[Trixi.jl](https://github.com/trixi-framework/Trixi.jl).
+[OrdinaryDiffEq.jl](https://github.com/SciML/OrdinaryDiffEq.jl),
+the visualization package [Plots.jl](https://github.com/JuliaPlots/Plots.jl),
+and of course [Trixi.jl](https://github.com/trixi-framework/Trixi.jl).
 The `--project=.` argument tells Julia's package manager
 [Pkg.jl](https://pkgdocs.julialang.org/v1/)
 to use the [`Project.toml`](Project.toml) and [`Manifest.toml`](Manifest.toml)
@@ -174,6 +174,7 @@ julia --project=.
 
 
 ## Authors
+
 This repository was created by [Hendrik Ranocha](htttps://ranocha.de).
 It is based on a tutorial previously given at
 [ICOSAHOM 2021](https://github.com/trixi-framework/tutorial-2021-icosahom),
