@@ -1,13 +1,13 @@
-# Trixi.jl: High-Order Numerical Simulations of Conservation Laws in Julia
+# Trixi.jl: Adaptive high-order numerical simulations of hyperbolic PDEs in Julia
 
-This is the companion repository for the online tutorial on the
+This is the companion repository for the tutorial on the
 [Julia programming language](https://julialang.org) and
-[Trixi.jl](https://github.com/trixi-framework/Trixi.jl), given in the context of
-the DFG research unit [SNuBIC](https://snubic.io) on 19th January 2023.
+[Trixi.jl](https://github.com/trixi-framework/Trixi.jl),
+given at the University of Kassel on May 24, 2023.
 
 In case of questions before the beginning of the tutorial, please get in touch with
-[Michael](https://lakemper.eu) or
-[create an issue](https://github.com/trixi-framework/tutorial-2023-snubic/issues/new).
+[Hendrik](https://ranocha.de) or
+[create an issue](https://github.com/trixi-framework/tutorial-2023-kassel/issues/new).
 For Trixi.jl-specific questions, you can also create an issue in the
 [Trixi.jl GitHub repository](https://github.com/trixi-framework/Trixi.jl)
 or
@@ -15,10 +15,11 @@ or
 
 
 ## Tutorial files
+
 | Item | [nbviewer](https://nbviewer.jupyter.org/) | [mybinder](https://mybinder.org/) |
 |:-|:-:|:-:|
-| [`introduction_to_julia.ipynb`](introduction_to_julia.ipynb) | [![nbviewer](https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.jupyter.org/github/trixi-framework/tutorial-2023-snubic/blob/main/introduction_to_julia.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/trixi-framework/tutorial-2023-snubic/HEAD?filepath=introduction_to_julia.ipynb) |
-| [`introduction_to_trixi.ipynb`](introduction_to_trixi.ipynb) | [![nbviewer](https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.jupyter.org/github/trixi-framework/tutorial-2023-snubic/blob/main/introduction_to_trixi.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/trixi-framework/tutorial-2023-snubic/HEAD?filepath=introduction_to_trixi.ipynb) |
+| [`introduction_to_julia.ipynb`](introduction_to_julia.ipynb) | [![nbviewer](https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.jupyter.org/github/trixi-framework/tutorial-2023-kassel/blob/main/introduction_to_julia.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/trixi-framework/tutorial-2023-kassel/HEAD?filepath=introduction_to_julia.ipynb) |
+| [`introduction_to_trixi.ipynb`](introduction_to_trixi.ipynb) | [![nbviewer](https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.jupyter.org/github/trixi-framework/tutorial-2023-kassel/blob/main/introduction_to_trixi.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/trixi-framework/tutorial-2023-kassel/HEAD?filepath=introduction_to_trixi.ipynb) |
 
 **Note: The Jupyter notebook files will be provided at the latest on the day of the
 tutorial.** You can, however, already follow the instructions
@@ -71,6 +72,7 @@ the Julia REPL maintain an internal state and and some snippets depend on
 earlier statements having been executed.
 
 ### Using mybinder.org
+
 The easiest way to get started is to click on the *Launch Binder* badges
 in the table of contents above.
 This launches the notebook for interactive use in your browser without the need
@@ -90,13 +92,15 @@ Julia compiles all methods "just-ahead-of-time" at first use. Subsequent runs
 will be much faster.
 
 ### Setting up a local Julia/Jupyter installation
+
 Alternatively, you can also clone this repository and open the notebook on your
 local machine. This is recommended if you already have a Julia + Jupyter setup
 or if you plan to try out Julia anyways.
 
 #### Installing Julia and IJulia
+
 To obtain Julia, go to https://julialang.org/downloads/ and download the latest
-stable release (v1.8.5 as of 2023-01-15; neither use the LTS release nor
+stable release (v1.9.0 as of 2023-05-10; neither use the LTS release v1.6 nor
 Julia Pro!). Then, follow the
 [platform-specific instructions](https://julialang.org/downloads/platform/)
 to install Julia on your machine. Note that there is no need to compile anything
@@ -121,6 +125,7 @@ From here on, we assume that you have a working installation of Julia, Jupyter,
 and the Julia kernel for Jupyter.
 
 #### Installing the required Julia packages
+
 To make the notebook fully reproducible, we have used Julia's package manager
 to pin all packages to a fixed release. This ensures that you always have a
 Julia environment in which all examples in this notebook work. Later you can
@@ -130,11 +135,11 @@ the instructions in the Trixi
 
 If you have not done it yet, clone the repository where this notebook is stored:
 ```shell
-git clone https://github.com/trixi-framework/tutorial-2023-snubic.git
+git clone https://github.com/trixi-framework/tutorial-2023-kassel.git
 ```
 Then, navigate to your repository folder and install the required packages:
 ```shell
-cd tutorial-2023-snubic
+cd tutorial-2023-kassel
 julia --project=. -e 'using Pkg; Pkg.instantiate()'
 ```
 This will download and build all required packages, including the ODE package
@@ -147,6 +152,7 @@ to use the [`Project.toml`](Project.toml) and [`Manifest.toml`](Manifest.toml)
 files from this repository to figure out which packages to install.
 
 #### Starting JupyterHub from Julia
+
 You can finally start JupyterHub from Julia using the following command inside
 the repository folder:
 ```shell
@@ -154,6 +160,7 @@ julia -e 'using IJulia; jupyterlab(dir=".")'
 ```
 
 ### Using the Julia REPL
+
 If you want, you can also directly execute the notebook contents in the Julia
 REPL. In this case, please also follow the instructions on installing the
 required Julia packages [above](#installing-the-required-julia-packages). Then,
@@ -164,13 +171,18 @@ julia --project=.
 
 
 ## Authors
-This repository was created by [Michael
-Schlottke-Lakemper](https://lakemper.eu). It is based on a tutorial previously
-given at [ICOSAHOM 2021](https://github.com/trixi-framework/tutorial-2021-icosahom),
-which was initiated jointly by [Hendrik Ranocha](https://ranocha.de), Michael
-and [Andrew R. Winters](https://liu.se/en/employee/andwi94).
+This repository was created by [Hendrik Ranocha](htttps://ranocha.de).
+It is based on a tutorial previously given at
+[ICOSAHOM 2021](https://github.com/trixi-framework/tutorial-2021-icosahom),
+which was initiated jointly by Hendrik Ranocha,
+[Michael Schlottke-Lakemper](https://lakemper.eu),
+and [Andrew R. Winters](https://liu.se/en/employee/andwi94)
+and the [2023 tutorial](https://github.com/trixi-framework/tutorial-2023-snubic)
+of [Michael Schlottke-Lakemper](https://lakemper.eu) given in the context of the
+[DFG research unit SNuBIC](https://snubic.io/).
 
 
 ## License
+
 The contents of this repository are licensed under the MIT license
 (see [LICENSE.md](LICENSE.md)).
