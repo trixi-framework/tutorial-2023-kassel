@@ -1,7 +1,7 @@
 # Trixi.jl: Adaptive high-order numerical simulations of hyperbolic PDEs in Julia
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/TODO.svg)](https://doi.org/TODO)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7924312.svg)](https://doi.org/10.5281/zenodo.7924312)
 
 This is the companion repository for the tutorial on the
 [Julia programming language](https://julialang.org) and
