@@ -1,0 +1,19 @@
+{
+    "license": "MIT",
+    "title": "Companion repository for a tutorial on the Julia programming language and Trixi.jl, a Julia package for adaptive high-order numerical simulations of hyperbolic PDEs",
+    "upload_type": "software",
+    "creators": [
+        {
+            "affiliation": "Applied Mathematics, University of Hamburg, Germany",
+            "name": "Ranocha, Hendrik",
+            "orcid": "0000-0002-3456-2277"
+        },
+        {
+            "affiliation": "Applied and Computational Mathematics, RWTH Aachen University, Germany",
+            "name": "Schlottke-Lakemper, Michael",
+            "orcid": "0000-0002-3195-2536"
+        }
+    ],
+    "access_right": "open"
+}
+

@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2023-present Hendrik Ranocha, Michael Schlottke-Lakemper, and Andrew Winters
+Copyright (c) 2023-present Hendrik Ranocha and Michael Schlottke-Lakemper
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
